@@ -4,24 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.david.rps.MainActivity">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="8dp">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="10sp"
             android:text="leaderboards"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
             android:text="total coins"/>
-    </LinearLayout>
+    </RelativeLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -31,10 +33,9 @@
         android:layout_centerHorizontal="true"
         android:textAllCaps="true"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -42,16 +43,20 @@
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:layout_toLeftOf="@id/betValue"
             android:text="-"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/betValue"
             android:text="bet filler"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@id/betValue"
             android:text="+"/>
-    </LinearLayout>
+    </RelativeLayout>
 
 
 
