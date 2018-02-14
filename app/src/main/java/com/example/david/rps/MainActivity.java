@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     int bet = 1;
     int total_coin = 50;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
         coinView.setText(String.valueOf(total_coin));
     }
 
-    displayForBet(int bet);
-    displayForCoins(int total_coin);
+
 
     public void add_bet(View v) {
         if (total_coin > bet) {
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             displayForCoins(total_coin);
         }
     }
+
 
 
 }
