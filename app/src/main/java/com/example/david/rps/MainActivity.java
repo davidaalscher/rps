@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     int bet = 1;
     int total_coin = 49;
-    int updated_coin = 49;
+    int updated_coin = 50;
 /*
     TextView coinValue = (TextView) findViewById(R.id.coin_value);
     coinValue.setText(getString(R.string.total_coins,total_coin));
