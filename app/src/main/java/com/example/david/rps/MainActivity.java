@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int bet = 1;
-    //int total_coin = 10;
+    int total_coin = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +49,25 @@ public class MainActivity extends AppCompatActivity {
         betView.setText(String.valueOf(bet));
     }
 
+    public void displayForCoins(int total_coin){
+        TextView coinView = (TextView) findViewById(R.id.coin_value);
+        betView.setText(String.valueOf(total_coin));
+    }
+
     public void add_bet(View v){
         bet = bet + 1;
+        total_coin = total_coin - 1;
         displayForBet(bet);
+        displayForCoins(total_coin);
     }
 
 
     public void sub_bet(View v){
         bet = bet - 1;
+        total_coin = total_coin - 1;
         displayForBet(bet);
+        displayForCoins(total_coin);
     }
-
-
 
 
 }
