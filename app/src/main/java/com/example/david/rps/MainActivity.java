@@ -3,8 +3,8 @@ package com.example.david.rps;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+//import android.view.Menu;
+//import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -56,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
 */
 
     public void displayForBet(int bet){
-        TextView betView = (TextView) findViewById(R.id.bet_value);
+        TextView betView = /*(TextView)*/ findViewById(R.id.bet_value);
         betView.setText(String.valueOf(bet));
     }
 
     public void displayForCoins(int total_coin){
-        TextView coinView = (TextView) findViewById(R.id.coin_value);
+        TextView coinView = /*(TextView)*/ findViewById(R.id.coin_value);
         coinView.setText(String.valueOf(total_coin));
     }
 /*
