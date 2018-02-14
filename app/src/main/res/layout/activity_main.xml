@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,34 +28,47 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textAllCaps="true"/>
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Play"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_contraintLeft_toLeftOf="parent" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="31dp">
+
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_toLeftOf="@id/betValue"
-            android:text="-"/>
+            android:text="-" />
+
         <TextView
+            android:id="@+id/betValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:id="@+id/betValue"
-            android:text="bet filler"/>
+            android:text="bet filler" />
+
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_toRightOf="@id/betValue"
-            android:text="+"/>
+            android:text="+" />
     </RelativeLayout>
 
 
@@ -67,5 +80,5 @@
 
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 
