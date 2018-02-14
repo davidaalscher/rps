@@ -10,16 +10,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="leaderboards"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
         android:text="total coins"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="16dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:layout_width="wrap_content"
@@ -44,8 +45,11 @@
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_toLeftOf="@id/betValue"
+        android:layout_toStartOf="@id/betValue"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,8 +74,11 @@
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_toRightOf="@id/betValue"
+        android:layout_toEndOf="@id/betValue"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/betValue"
