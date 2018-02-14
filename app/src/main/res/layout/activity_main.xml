@@ -41,7 +41,7 @@
 
     <Button
         android:id="@+id/button"
-        android:onClick="sub_bet"
+        android:onClick="add_bet"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
@@ -51,15 +51,15 @@
         android:layout_marginLeft="4dp"
         android:layout_toLeftOf="@id/bet_value"
         android:layout_toStartOf="@id/bet_value"
-        android:text="-"
+        android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bet_value" />
 
     <TextView
         android:id="@+id/bet_value"
-        android:layout_width="55dp"
-        android:layout_height="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="4dp"
@@ -71,7 +71,7 @@
 
     <Button
         android:id="@+id/button3"
-        android:onClick="add_bet"
+        android:onClick="sub_bet"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
@@ -81,7 +81,7 @@
         android:layout_marginLeft="8dp"
         android:layout_toRightOf="@id/bet_value"
         android:layout_toEndOf="@id/bet_value"
-        android:text="+"
+        android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bet_value"
         app:layout_constraintHorizontal_chainStyle="packed"
