@@ -51,9 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayForCoins(int total_coin){
         TextView coinView = (TextView) findViewById(R.id.coin_value);
-        coinView.setText(total_coin);
         coinView.setText(String.valueOf(total_coin));
     }
+
+    displayForBet(int bet);
+    displayForCoins(int total_coin);
 
     public void add_bet(View v) {
         if (total_coin > bet) {
