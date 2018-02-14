@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">rps</string>
-    <string name="total_coins"></string>
+    <string name="total_coins">100</string>
 </resources>

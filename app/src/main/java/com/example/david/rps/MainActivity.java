@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     int total_coin = 50;
     int updated_coin = 50;
 
-    TextView coinValue = (TextView) findViewById(R.id.coin_value);
-    coinValue.setText(getString(R.string.total_coins,total_coin));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

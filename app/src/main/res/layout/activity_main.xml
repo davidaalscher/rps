@@ -19,7 +19,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="8dp"
         android:id="@+id/coin_value"
-        android:text="@string/total_coins"
+        android:text="49"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
