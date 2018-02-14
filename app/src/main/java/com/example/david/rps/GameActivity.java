@@ -1,8 +1,12 @@
 package com.example.david.rps;
 
+import android.os.Handler;
+//import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
@@ -15,8 +19,35 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                check();
+            }
+        }, 5000);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                check();
+            }
+        }, 10000);
     }
 
+    void check(){
+        int player = determine_hand(rock_value, paper_value, scissors_value);
+        int computer = determine_comp();
+        if ((player == 1 && computer == 2) || (player == 2 && computer == 3) || (player == 3 && computer == 1)) {
+            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+        }
+        if ((player == 2 && computer == 1) || (player == 3 && computer == 2) || (player == 1 && computer == 3)) {
+            Toast.makeText(this, "You win", Toast.LENGTH_LONG).show();
+        }
+        if (player == computer) {
+            Toast.makeText(this, "It is a draw", Toast.LENGTH_LONG).show();
+        }
+    }
     public void add_rock(View v) {
         rock_value = rock_value + 1;
     }
@@ -71,15 +102,13 @@ public class GameActivity extends AppCompatActivity {
         }
 
         Random rand = new Random();
-        int  n = rand.nextInt(3) + 1;
-        return n;
+        return rand.nextInt(3) + 1;
 
     }
 
     int determine_comp(){
         Random rand = new Random();
-        int  m = rand.nextInt(3) + 1;
-        return m;
+        return rand.nextInt(3) + 1;
     }
 
 }
