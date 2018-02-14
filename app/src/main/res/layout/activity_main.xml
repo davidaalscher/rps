@@ -33,6 +33,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/round_play"
         android:text="Play"
+        android:onClick="startGame"
         android:elevation="8dp"
         android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
