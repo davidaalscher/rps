@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         displayForBet(bet);
     }
 
-    }
+
 
 
 }
