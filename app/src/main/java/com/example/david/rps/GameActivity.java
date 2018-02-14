@@ -17,15 +17,15 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
     }
 
-    public void add_rock() {
+    public void add_rock(View v) {
         rock_value = rock_value + 1;
     }
 
-    public void add_paper() {
+    public void add_paper(View v) {
         paper_value = paper_value + 1;
     }
 
-    public void add_scissors() {
+    public void add_scissors(View v) {
         scissors_value = scissors_value + 1;
     }
 
