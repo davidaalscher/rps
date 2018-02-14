@@ -75,5 +75,11 @@ public class GameActivity extends AppCompatActivity {
         return n;
 
     }
-    
+
+    int determine_comp(){
+        Random rand = new Random();
+        int  m = rand.nextInt(3) + 1;
+        return m;
+    }
+
 }
