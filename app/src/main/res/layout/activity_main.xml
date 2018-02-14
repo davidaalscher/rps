@@ -4,26 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.david.rps.MainActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:text="leaderboards"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_alignParentRight="true"
-            android:text="total coins"/>
-    </RelativeLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="leaderboards"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="total coins"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -40,37 +36,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_contraintLeft_toLeftOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_toLeftOf="@id/betValue"
+        android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="31dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/betValue" />
 
-        <Button
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_toLeftOf="@id/betValue"
-            android:text="-" />
+    <TextView
+        android:id="@+id/betValue"
+        android:layout_width="55dp"
+        android:layout_height="17dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:text="bet filler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/button3" />
 
-        <TextView
-            android:id="@+id/betValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="bet filler" />
-
-        <Button
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_toRightOf="@id/betValue"
-            android:text="+" />
-    </RelativeLayout>
-
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/betValue"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/betValue"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 
