@@ -12,8 +12,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int bet = 1;
-    int total_coin = 49;
-    int updated_coin = 50;
+    //int checking = call_total();
+    int total_coin = (checking()-1);
+    int updated_coin = checking();
 /*
     TextView coinValue = (TextView) findViewById(R.id.coin_value);
     coinValue.setText(getString(R.string.total_coins,total_coin));
@@ -22,12 +23,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initialize(total_coin);
 
     }
 
     public void startGame(View v){
-        Intent i = new Intent(this, GameActivity.class);
-        startActivity(i);
+        Intent m = new Intent(this, GameActivity.class);
+        m.putExtra("TotalCoin", total_coin);
+        m.putExtra("BetCoin", bet);
+        startActivity(m);
     }
 
     /*
@@ -64,11 +68,11 @@ public class MainActivity extends AppCompatActivity {
         TextView coinView = /*(TextView)*/ findViewById(R.id.coin_value);
         coinView.setText(String.valueOf(total_coin));
     }
-/*
-    public void initialize(View v){
+
+    public void initialize(int total_coin){
         displayForCoins(total_coin);
     }
-*/
+
     public void add_bet(View v) {
         if (bet < updated_coin) {
             bet = bet + 1;
@@ -86,6 +90,19 @@ public class MainActivity extends AppCompatActivity {
             displayForBet(bet);
             displayForCoins(total_coin);
         }
+    }
+
+    public int call_total() {
+        //Intent m = getIntent();
+        return 30;//m.getIntExtra("NewCoin", 0);
+    }
+
+    public int checking(){
+        int w = call_total();
+        if (w == 0){
+            return 50;
+        }
+        return w;
     }
 
 }
