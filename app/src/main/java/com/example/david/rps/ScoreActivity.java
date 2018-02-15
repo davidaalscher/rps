@@ -3,7 +3,7 @@ package com.example.david.rps;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 //import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

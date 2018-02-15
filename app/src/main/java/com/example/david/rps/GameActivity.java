@@ -66,18 +66,24 @@ public class GameActivity extends AppCompatActivity {
             //Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, ScoreActivity.class);
             i.putExtra("score", "You Lost");
+            i.putExtra("new_coin", call_total());
+            //i.putExtra("bet_coin", call_bet());
             startActivity(i);
         }
         if ((player == 2 && computer == 1) || (player == 3 && computer == 2) || (player == 1 && computer == 3)) {
             //Toast.makeText(this, "You win", Toast.LENGTH_LONG).show();
             Intent j = new Intent(this, ScoreActivity.class);
             j.putExtra("score", "You Won");
+            j.putExtra("new_coin", (call_total()+(call_bet()*2)));
+            //j.putExtra("bet_coin", call_bet());
             startActivity(j);
         }
         if (player == computer) {
             //Toast.makeText(this, "It is a draw", Toast.LENGTH_LONG).show();
             Intent k = new Intent(this, ScoreActivity.class);
             k.putExtra("score", "It's a Draw");
+            k.putExtra("new_coin", (call_total()+call_bet()));
+            //k.putExtra("bet_coin", call_bet());
             startActivity(k);
         }
     }
@@ -166,6 +172,16 @@ public class GameActivity extends AppCompatActivity {
     int determine_comp(){
         Random rand = new Random();
         return rand.nextInt(3) + 1;
+    }
+
+    public int call_total() {
+        Intent m = getIntent();
+        return m.getIntExtra("TotalCoin", 0);
+    }
+
+    public int call_bet(){
+        Intent n = getIntent();
+        return n.getIntExtra("BetCoin", 0);
     }
 
 }
