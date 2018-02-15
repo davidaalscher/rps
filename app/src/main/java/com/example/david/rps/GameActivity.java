@@ -1,12 +1,13 @@
 package com.example.david.rps;
 
+import android.content.Intent;
 import android.os.Handler;
 //import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 import java.util.Random;
 
@@ -62,13 +63,22 @@ public class GameActivity extends AppCompatActivity {
         int player = determine_hand(rock_value, paper_value, scissors_value);
         int computer = determine_comp();
         if ((player == 1 && computer == 2) || (player == 2 && computer == 3) || (player == 3 && computer == 1)) {
-            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, ScoreActivity.class);
+            i.putExtra("score", "You Lost");
+            startActivity(i);
         }
         if ((player == 2 && computer == 1) || (player == 3 && computer == 2) || (player == 1 && computer == 3)) {
-            Toast.makeText(this, "You win", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "You win", Toast.LENGTH_LONG).show();
+            Intent j = new Intent(this, ScoreActivity.class);
+            j.putExtra("score", "You Won");
+            startActivity(j);
         }
         if (player == computer) {
-            Toast.makeText(this, "It is a draw", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "It is a draw", Toast.LENGTH_LONG).show();
+            Intent k = new Intent(this, ScoreActivity.class);
+            k.putExtra("score", "It's a Draw");
+            startActivity(k);
         }
     }
 
