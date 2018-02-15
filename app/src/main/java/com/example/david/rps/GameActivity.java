@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
@@ -14,6 +15,10 @@ public class GameActivity extends AppCompatActivity {
     int rock_value = 0;
     int paper_value = 0;
     int scissors_value = 0;
+    int three = 3;
+    int two = 2;
+    int one = 1;
+    String go = "GO!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +29,33 @@ public class GameActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                check();
+                displayFirstCount(three);
             }
         }, 5000);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                check();
+                displaySecondCount(two);
             }
         }, 10000);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayThirdCount(one);
+            }
+        }, 15000);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayFourthCount(go);
+            }
+        }, 20000);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                check();
+            }
+        }, 20500);
     }
 
     void check(){
@@ -48,6 +71,30 @@ public class GameActivity extends AppCompatActivity {
             Toast.makeText(this, "It is a draw", Toast.LENGTH_LONG).show();
         }
     }
+
+    public void displayFirstCount(int three){
+        TextView CountView = /*(TextView)*/ findViewById(R.id.count_value);
+        CountView.setText(String.valueOf(three));
+    }
+
+    public void displaySecondCount(int two){
+        //TextView secondCountView = /*(TextView)*/ findViewById(R.id.first_count);
+        TextView CountView = /*(TextView)*/ findViewById(R.id.count_value);
+        CountView.setText(String.valueOf(two));
+    }
+
+    public void displayThirdCount(int one){
+        //TextView secondCountView = /*(TextView)*/ findViewById(R.id.first_count);
+        TextView CountView = /*(TextView)*/ findViewById(R.id.count_value);
+        CountView.setText(String.valueOf(one));
+    }
+
+    public void displayFourthCount(String go){
+        //TextView secondCountView = /*(TextView)*/ findViewById(R.id.first_count);
+        TextView CountView = /*(TextView)*/ findViewById(R.id.count_value);
+        CountView.setText(go);
+    }
+
     public void add_rock(View v) {
         rock_value = rock_value + 1;
     }
