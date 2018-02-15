@@ -31,31 +31,31 @@ public class GameActivity extends AppCompatActivity {
             public void run() {
                 displayFirstCount(three);
             }
-        }, 5000);
+        }, 2000);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 displaySecondCount(two);
             }
-        }, 10000);
+        }, 4000);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 displayThirdCount(one);
             }
-        }, 15000);
+        }, 6000);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 displayFourthCount(go);
             }
-        }, 20000);
+        }, 8000);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 check();
             }
-        }, 20500);
+        }, 8500);
     }
 
     void check(){
