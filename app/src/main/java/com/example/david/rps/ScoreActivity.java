@@ -1,6 +1,7 @@
 package com.example.david.rps;
 
 import android.content.Intent;
+import android.view.View;
 import android.widget.Toast;
 //import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,11 @@ public class ScoreActivity extends AppCompatActivity {
         Intent i = getIntent();
         String score = i.getStringExtra("score");
         Toast.makeText(this, score, Toast.LENGTH_LONG).show();
+    }
+
+    public void playAgain(View v){
+        Intent j = new Intent(this, MainActivity.class);
+        startActivity(j);
     }
 
 }
