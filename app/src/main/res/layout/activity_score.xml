@@ -15,7 +15,7 @@
         android:layout_marginEnd="8sp"
         android:layout_marginStart="8sp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/score_value"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
@@ -92,14 +92,13 @@
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/score_value"
         android:layout_width="wrap_content"
         android:layout_height="19sp"
         android:layout_marginBottom="8sp"
         android:layout_marginEnd="8sp"
         android:layout_marginStart="8sp"
         android:layout_marginTop="16sp"
-        android:text="Win/Loss Filler"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +119,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/score_value" />
 
 
 </android.support.constraint.ConstraintLayout>
