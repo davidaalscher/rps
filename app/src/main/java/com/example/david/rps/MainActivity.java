@@ -92,17 +92,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public int call_total() {
-        //Intent m = getIntent();
-        return 30;//m.getIntExtra("NewCoin", 0);
-    }
-
-    public int checking(){
-        int w = call_total();
-        if (w == 0){
-            return 50;
+    public int checking() {
+        Intent m = getIntent();
+        if (m != null) {
+            total_coin = m.getIntExtra("NewCoin", 0);
+            initialize(total_coin);
+            return total_coin;
         }
-        return w;
+        return 50;
     }
 
 }
